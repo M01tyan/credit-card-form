@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/credit-card-form/static/css/main.b100e6da.chunk.css",
-    "main.js": "/credit-card-form/static/js/main.d449ddc3.chunk.js",
-    "main.js.map": "/credit-card-form/static/js/main.d449ddc3.chunk.js.map",
+    "main.css": "/credit-card-form/static/css/main.c6f5d0d0.chunk.css",
+    "main.js": "/credit-card-form/static/js/main.96c56814.chunk.js",
+    "main.js.map": "/credit-card-form/static/js/main.96c56814.chunk.js.map",
     "runtime-main.js": "/credit-card-form/static/js/runtime-main.504e548f.js",
     "runtime-main.js.map": "/credit-card-form/static/js/runtime-main.504e548f.js.map",
-    "static/js/2.6eb78d46.chunk.js": "/credit-card-form/static/js/2.6eb78d46.chunk.js",
-    "static/js/2.6eb78d46.chunk.js.map": "/credit-card-form/static/js/2.6eb78d46.chunk.js.map",
+    "static/js/2.a854df48.chunk.js": "/credit-card-form/static/js/2.a854df48.chunk.js",
+    "static/js/2.a854df48.chunk.js.map": "/credit-card-form/static/js/2.a854df48.chunk.js.map",
     "index.html": "/credit-card-form/index.html",
-    "precache-manifest.de0b14d9c8ef3f06f64db193e4e73479.js": "/credit-card-form/precache-manifest.de0b14d9c8ef3f06f64db193e4e73479.js",
+    "precache-manifest.f1693332846cde0b632ae82b2ad7d994.js": "/credit-card-form/precache-manifest.f1693332846cde0b632ae82b2ad7d994.js",
     "service-worker.js": "/credit-card-form/service-worker.js",
-    "static/css/main.b100e6da.chunk.css.map": "/credit-card-form/static/css/main.b100e6da.chunk.css.map",
-    "static/media/logo.svg": "/credit-card-form/static/media/logo.25bf045c.svg"
+    "static/css/main.c6f5d0d0.chunk.css.map": "/credit-card-form/static/css/main.c6f5d0d0.chunk.css.map",
+    "static/media/chip.png": "/credit-card-form/static/media/chip.2c37b1d3.png",
+    "static/media/discover.png": "/credit-card-form/static/media/discover.62706277.png",
+    "static/media/jcb.png": "/credit-card-form/static/media/jcb.87087e5e.png",
+    "static/media/mastercard.png": "/credit-card-form/static/media/mastercard.cdaba15c.png",
+    "static/media/unionpay.png": "/credit-card-form/static/media/unionpay.40ead9ad.png"
   },
   "entrypoints": [
     "static/js/runtime-main.504e548f.js",
-    "static/js/2.6eb78d46.chunk.js",
-    "static/css/main.b100e6da.chunk.css",
-    "static/js/main.d449ddc3.chunk.js"
+    "static/js/2.a854df48.chunk.js",
+    "static/css/main.c6f5d0d0.chunk.css",
+    "static/js/main.96c56814.chunk.js"
   ]
 }
