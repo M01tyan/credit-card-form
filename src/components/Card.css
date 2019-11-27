@@ -1,0 +1,98 @@
+.credit-card {
+  width: 450px;
+  height: 270px;
+  background-color: #1A1A3B;
+  border-radius: 30px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  filter: drop-shadow(0px 20px 15px rgba(0, 0, 0, 0.5));
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+  height: 20%;
+}
+
+.chip {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.card-company-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.card-number-container {
+  display: flex;
+  height: 10%;
+  width: 90%;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.card-numbers {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.number-text {
+  font-size: 30px;
+}
+
+.card-name-limit-container {
+  display: flex;
+  height: 20%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-name {
+  display: flex;
+  flex: 7;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.card-limit {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+}
+
+.subtitle {
+  color: #AAAAAA;
+  font-size: 15px;
+}
+
+.rotate-animation {
+  animation: rotate .5s linear;
+}
+
+@keyframes rotate {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
