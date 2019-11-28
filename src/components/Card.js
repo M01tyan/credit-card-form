@@ -29,30 +29,34 @@ const CardFront = () => {
   const [card_limit_month] = useState("MM");
   const [card_limit_year] = useState("YY");
   const [card_rotate, setRotate] = useState(false);
+  const [card_front, setFront] = useState(true);
   return (
-    <div className={`credit-card ${card_rotate && "rotate-animation"}`} onClick={() => setRotate(true)} onAnimationEnd={event => setRotate(false)}>
-      <div className="logo-container">
-        <img src={require("../assets/images/chip.png")} alt="chip" className="chip" />
-        <img src={require(`../assets/images/${card_company}.png`)} alt="card-company" className="card-company-logo" />
-      </div>
-      <div className="card-number-container">
-        <div className="card-numbers">
-        {CardNumber(card_number).map((item, index) => (
-          <div key={index} className="number-text">{item}</div>
-        ))}
+    card_rotate ?
+      <div className={`credit-card ${card_rotate && "front-rotate-animation"}`} onClick={() => setRotate(false)}>Z</div> :
+      <div className={`credit-card ${!card_rotate && "back-rotate-animation"}`} onClick={() => setRotate(true)} //onAnimationEnd={event => setRotate(false)}
+      >
+        <div className="logo-container">
+          <img src={require("../assets/images/chip.png")} alt="chip" className="chip" />
+          <img src={require(`../assets/images/${card_company}.png`)} alt="card-company" className="card-company-logo" />
+        </div>
+        <div className="card-number-container">
+          <div className="card-numbers">
+          {CardNumber(card_number).map((item, index) => (
+            <div key={index} className="number-text">{item}</div>
+          ))}
+          </div>
+        </div>
+        <div className="card-name-limit-container">
+          <div className="card-name">
+            <div className="subtitle">Card Holder</div>
+            <div className="holder-name">{card_holder}</div>
+          </div>
+          <div className="card-limit">
+            <div className="subtitle">Expires</div>
+            <div className="limit">{`${card_limit_month}/${card_limit_year}`}</div>
+          </div>
         </div>
       </div>
-      <div className="card-name-limit-container">
-        <div className="card-name">
-          <div className="subtitle">Card Holder</div>
-          <div className="holder-name">{card_holder}</div>
-        </div>
-        <div className="card-limit">
-          <div className="subtitle">Expires</div>
-          <div className="limit">{`${card_limit_month}/${card_limit_year}`}</div>
-        </div>
-      </div>
-    </div>
   )
 }
 

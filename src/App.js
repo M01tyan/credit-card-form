@@ -11,7 +11,7 @@ function App() {
         <Router>
           <Card />
         </Router>
-        <InputForm />
+        {/* <InputForm /> */}
       </div>
     </div>
   );

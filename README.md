@@ -1,3 +1,11 @@
+## ToDo
++ [ ] Sass対応
++ [ ] CardInputFormのViewコーディング
++ [ ] グローバルstateの導入
++ [ ] Stateの反映
++ [ ] Animation
++ [ ] レスポンシブ対応
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
