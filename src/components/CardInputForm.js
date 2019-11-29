@@ -16,10 +16,20 @@ const CardInputForm = () => {
           <input className="card-input-form__input-form" type="text" name="name" value={name} onChange={(event) => setName(event.target.value)} />
         </div>
         <div className="card-input-form__column">
-          Expiration Date 
-          <div className="card-input-form__limit">
-          <input className="card-input-form__input-form card-input-form__input-date" />
-          <input className="card-input-form__input-form .card-input-form__input-date" />
+          <div className="card-input-form__subtitle">
+            <div style={{width: '70%'}}>Expiration Date</div>
+            <div style={{width: '30%'}}>CW</div>
+          </div>
+          <div className="card-input-form__row">
+            <div className="card-input-form__expiration">
+              <select className="card-input-form__input-form card-input-form__select">
+                <option value="--">Month</option>
+              </select>
+              <select className="card-input-form__input-form card-input-form__select">
+                <option value="--">Year</option>
+              </select>
+            </div>
+            <input className="card-input-form__input-form card-input-form__input-cw" type="text" name="cw"/>
           </div>
         </div>
         <div className="card-input-form__submit-button">

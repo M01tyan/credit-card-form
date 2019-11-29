@@ -34,7 +34,7 @@ const Card = () => {
           </div>
         </div>
         <div className="credit-card__back">
-          Z
+          ウラ
         </div>
       </div>
     </div>
