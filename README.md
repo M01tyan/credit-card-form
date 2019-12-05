@@ -1,9 +1,9 @@
 ## ToDo
-+ [ ] Cardアニメーション
-+ [ ] Sass対応
-+ [ ] CardInputFormのViewコーディング
-+ [ ] グローバルstateの導入
-+ [ ] Stateの反映
++ [x] Cardアニメーション
++ [x] Sass対応
++ [x] CardInputFormのViewコーディング
++ [x] グローバルstateの導入
++ [x] Stateの反映
 + [ ] Animation
 + [ ] レスポンシブ対応
 
