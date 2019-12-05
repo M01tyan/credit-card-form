@@ -1,40 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Card.scss';
+import { Store } from '../redux/store';
 
 const Card = () => {
+  const { state } = useContext(Store);
   const [card_company] = useState("mastercard");
-  const [card_number] = useState("");
-  const [card_holder] = useState("AD SOAD");
-  const [card_limit_month] = useState("MM");
-  const [card_limit_year] = useState("YY");
   return (
     <div className="credit-card">
-      <div className="credit-card__inner">
+      <div className={`credit-card__inner ${state.focus === "CW" && "credit-card__rotate"}`}>
         <div className="credit-card__front">
           <div className="credit-card__logo">
             <img src={require("../assets/images/chip.png")} alt="chip" className="credit-card__chip" />
             <img src={require(`../assets/images/${card_company}.png`)} alt="card-company" className="credit-card__company" />
           </div>
-          <div className="credit-card__numbers">
+          <div className={`credit-card__numbers ${state.focus === "NUMBER" && "credit-card__focus_border"}`}>
             <div className="credit-card__row">
-            {CardNumber(card_number).map((item, index) => (
+            {CardNumber(state.number).map((item, index) => (
               <div key={index} className="credit-card__number-text">{item}</div>
             ))}
             </div>
           </div>
           <div className="credit-card__bottom">
-            <div className="credit-card__holder">
+            <div className={`credit-card__holder ${state.focus === "NAME" && "credit-card__focus_border"}`}>
               <div className="credit-card__subtitle">Card Holder</div>
-              <div className="credit-card__holder-text">{card_holder}</div>
+              <div className="credit-card__holder-text">{state.name.length ? state.name : 'AD SOYAD'}</div>
             </div>
-            <div className="credit-card__limit">
+            <div className={`credit-card__limit ${state.focus === "LIMIT" && "credit-card__focus_border"}`}>
               <div className="credit-card__subtitle">Expires</div>
-              <div className="credit-card__limit-text">{`${card_limit_month}/${card_limit_year}`}</div>
+              <div className="credit-card__limit_text">
+                <div style={{flex: 1}}>{state.month || 'MM'}</div>
+                <div style={{flex: .5}}>{"/"}</div>
+                <div style={{flex: 1}}>{state.year || 'YY'}</div>
+              </div>
             </div>
           </div>
         </div>
         <div className="credit-card__back">
-          ウラ
+          <div className="credit-card__card_reader" />
+          <div className="credit-card__cw_text">CW</div>
+          <div className="credit-card__cw_background">
+            <div className="credit-card__cw_text">{state.cw}</div>
+          </div>
         </div>
       </div>
     </div>
