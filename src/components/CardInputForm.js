@@ -6,9 +6,33 @@ const CardInputForm = () => {
   const { state, dispatch } = useContext(Store);
 
   function changeNumber(event) {
-    if (event.target.value.length <= 16) {
-      dispatch({ type : 'CHANGE_NUMBER', value: event.target.value })
+    const number = event.target.value
+    if (number.length <= 16) {
+      dispatch({ type : 'CHANGE_NUMBER', value: number })
     }
+    let re = new RegExp('^4')
+    if (number.match(re) != null) dispatch({ type: 'CHANGE_LOGO', value: 'visa' })
+    
+    re = new RegExp('^(34|37)')
+    if (number.match(re) != null) dispatch({ type: 'CHANGE_LOGO', value: 'amex' })
+
+    re = new RegExp('^5[1-5]')
+    if (number.match(re) != null) dispatch({ type: 'CHANGE_LOGO', value: 'mastercard' })
+
+    re = new RegExp('^6011')
+    if (number.match(re) != null) dispatch({ type: 'CHANGE_LOGO', value: 'discover' })
+
+    re = new RegExp('^62')
+    if (number.match(re) != null) dispatch({ type: 'CHANGE_LOGO', value: 'unionpay' })
+
+    re = new RegExp('^9792')
+    if (number.match(re) != null) dispatch({ type: 'CHANGE_LOGO', value: 'troy' })
+
+    re = new RegExp('^3(?:0([0-5]|9)|[689]\\d?)\\d{0,11}')
+    if (number.match(re) != null) return 'dinersclub'
+
+    re = new RegExp('^35(2[89]|[3-8])')
+    if (number.match(re) != null) dispatch({ type: 'CHANGE_LOGO', value: 'jcb' })
   }
 
   function changeName(event) {

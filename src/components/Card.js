@@ -4,14 +4,13 @@ import { Store } from '../redux/store';
 
 const Card = () => {
   const { state } = useContext(Store);
-  const [card_company] = useState("mastercard");
   return (
     <div className="credit-card">
       <div className={`credit-card__inner ${state.focus === "CW" && "credit-card__rotate"}`}>
         <div className="credit-card__front">
           <div className="credit-card__logo">
             <img src={require("../assets/images/chip.png")} alt="chip" className="credit-card__chip" />
-            <img src={require(`../assets/images/${card_company}.png`)} alt="card-company" className="credit-card__company" />
+            <img src={require(`../assets/images/${state.logo}.png`)} alt="card-company" className="credit-card__company" />
           </div>
           <div className={`credit-card__numbers ${state.focus === "NUMBER" && "credit-card__focus_border"}`}>
             <div className="credit-card__row">
@@ -23,7 +22,7 @@ const Card = () => {
           <div className="credit-card__bottom">
             <div className={`credit-card__holder ${state.focus === "NAME" && "credit-card__focus_border"}`}>
               <div className="credit-card__subtitle">Card Holder</div>
-              <div className="credit-card__holder-text">{state.name.length ? state.name : 'AD SOYAD'}</div>
+              <div className="credit-card__holder-text">{state.name.length ? state.name : 'Taro Suzuki'}</div>
             </div>
             <div className={`credit-card__limit ${state.focus === "LIMIT" && "credit-card__focus_border"}`}>
               <div className="credit-card__subtitle">Expires</div>
@@ -40,6 +39,9 @@ const Card = () => {
           <div className="credit-card__cw_text">CW</div>
           <div className="credit-card__cw_background">
             <div className="credit-card__cw_text">{state.cw}</div>
+          </div>
+          <div className="credit-card__back_company">
+            <img src={require(`../assets/images/${state.logo}.png`)} alt={'logo'} className="credit-card__logo" />
           </div>
         </div>
       </div>

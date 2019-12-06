@@ -7,6 +7,7 @@ const initialState = {
   month: '',
   year: '',
   cw: '',
+  logo: 'visa',
   focus: 'NON'
 }
 

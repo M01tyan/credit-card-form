@@ -25,6 +25,11 @@ const reducer = (state = {}, action) => {
         ...state,
         cw: action.value
       }
+    case 'CHANGE_LOGO':
+      return {
+        ...state,
+        logo: action.value
+      }
     case 'CHANGE_FOCUS':
       return {
         ...state,
